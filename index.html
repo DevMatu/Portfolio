@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matu_Dev</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // Si la URL tiene #ancla, la sacamos
+        if (location.hash) {
+            history.replaceState(null, '', location.pathname + location.search);
+        }
+        // aseguro empezar arriba de la ventana
+        window.scrollTo(0, 0);
+    </script>
+
+</head>
+
+<body class="body">
+
+    <main>
+        <header class="header">
+            <div class="logo">
+                <i class="fa-solid fa-laptop-code"></i>
+                Matusalén Pecchini
+            </div>
+            <nav>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#tecnologias">Tecnologías</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <header class="hero">
+            <!--Presentacion-->
+            <h1>Hola, soy <span>Matu</span></h1>
+            <p>
+                Un desarrollador en formación, enfocado en el Desarrollo Web y Desktop. 
+                Apasionado por crear soluciones útiles y bien pensadas.
+                Me gustan los desafíos, aprender cosas nuevas y mejorar un poco cada día. 
+                Este portfolio representa mi camino y todo lo que todavía quiero lograr.
+            </p>
+        </header>
+
+        <section id="proyectos" class="section">
+            <!--Proyectos-->
+            <h2 class="titulo-seccion">Proyectos</h2>
+
+            <section class="proyectos-grid reveal">
+
+                <a href="https://github.com/DevMatu/Article_Magnament_App" target="_blank" class="card-link">
+                    <div class="card">
+                        <div>
+                            <i class="fas fa-code-branch"></i> <h3>Article Management App</h3>
+                        </div>
+                        <p>
+                            Aplicación de escritorio para la gestión de artículos.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://github.com/DevMatu/Clutch" target="_blank" class="card-link">
+                    <div class="card">
+                        <div>
+                            <i class="fas fa-cubes"></i> <h3>Clutch</h3>
+                        </div>
+                        <p>
+                            Juego de cartas y estrategia simple desarrollado en C++.
+                        </p>
+                    </div>
+                </a> 
+
+            </section>
+            
+        </section>
+
+        <section id="tecnologias" class="reveal">
+        <h2 class="titulo-seccion">Tecnologías</h2>
+        <div class="tech-container">
+            <div class="tech-item">
+                <i class="devicon-csharp-plain"></i>
+                <span>C#</span>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-dot-net-plain"></i>
+                <span>.NET</span>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-cplusplus-plain"></i>
+                <span>C++</span>
+            </div>
+            <div class="tech-item">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="tech-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+        </div>
+        </section>
+
+        <section id="contacto">
+            <div class="form-wrapper reveal">
+                <!--Contacto-->
+                <p> Contacto:</p>
+                <p>¿Tenés una propuesta acorde a mi perfil? ¡Hablemos!</p>
+                <p>¿Tenés un proyecto en mente? Escribime y vemos cómo avanzar.</p>
+
+                <form id="frmContacto" action="https://formspree.io/f/mnjawoqp" method="POST">
+                    <div>
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+
+            <div class="footer-content"> 
+                <a href="https://github.com/DevMatu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/matusalen-pecchini-096326220/?skipRedirect=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/pecchini_matu/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <p class="footer-copy">© 2026 Matusalén Pecchini</p>
+        </footer>
+    </main>
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

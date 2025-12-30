@@ -1,0 +1,363 @@
+﻿@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fadeInHero {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/*=========================================================================================*/
+
+html {
+  scroll-behavior: smooth; /* Esto hace que la página se deslice suavemente */
+}
+
+body{
+  margin: 0;
+  background-color: #0F0F0F;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #EAEAEA;
+  line-height: 1.6;
+}
+
+.header{
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  font-size: 1.2rem;
+  z-index: 1000;
+
+  color: #ccc;
+  background: rgba(17, 17, 17, 0.8); /* Negro con transparencia */
+  backdrop-filter: blur(10px);    /* Desenfoque */
+  border-bottom: 1px solid #8A1C1C33;
+}
+.header nav a{
+  margin: 0 20px;
+  text-decoration: none;
+  color: #EAEAEA;
+  font-size: 18px;
+}
+.header nav a:hover{
+  color: #8A1C1C;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Separa el icono del nombre */
+  color: #EAEAEA;
+  font-size: 18px;
+  cursor: default;
+}
+.logo i {
+  color: #8A1C1C; /* Le damos el color rojo al icono de la laptop */
+  font-size: 18px;
+}
+
+.titulo-seccion {
+  /* Estilo universal para todos los títulos de secciónes */
+  font-size: 36px;
+  color: #bbb;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+.section h3{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.section p{
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+#tecnologias {
+  padding: 80px 0;
+  text-align: center;
+}
+.tech-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que en el celu se acomoden abajo */
+  gap: 40px;
+  margin-top: 40px;
+}
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.tech-item i {
+  font-size: 3.5rem;
+  color: #bbb;
+  margin-bottom: 10px;
+  transition: color 0.3s, filter 0.3s;
+}
+.tech-item span {
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tech-item:hover i {
+  color: #8A1C1C;
+  filter: drop-shadow(0 0 10px rgba(178, 59, 59, 0.5));
+}
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.hero {
+  background: linear-gradient(-45deg, #000000, #1a0505, #000000, #3d0a0a);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  border-bottom: 1px solid #8A1C1C33;
+  padding: 85px 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: -1px; /* Un truco de diseño: juntar un poquito las letras */
+  margin-bottom: 20px;
+  animation: fadeInHero 1.2s ease-out forwards;
+}
+.hero p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #bbb;
+  line-height: 1.8;
+  animation: fadeInHero 1.2s ease-out forwards;
+}
+.hero h1 span{
+  color: #8A1C1C;
+  text-shadow: 0 0 5px rgba(178, 59, 59, 0.6);
+}
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid rgba(138, 28, 28, 0.2); /* Tu rojo con transparencia */
+  margin-top: 100px;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+.footer-content a {
+  text-decoration: none; /* Saca el subrayado azul feo */
+  color: #bbb;
+  font-size: 2.5rem; /* Un poco más grandes todavía */
+  transition: all 0.3s ease;
+  display: inline-block; /* Ayuda a que la transformación funcione mejor */
+}
+.footer-content a i {
+  font-size: inherit; /* Hereda el tamaño del link */
+}
+.footer-content a:hover {
+  color: #8A1C1C;
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px rgba(178, 59, 59, 0.6); /* Un brillito extra al pasar el mouse */
+}
+
+.card {
+  background-color: #1A1A1A;
+  border: 1px solid #8A1C1C;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  padding: 25px;
+  width: 300px;
+  height: 250px;
+}
+.card:hover{
+  border-color: #B23B3B;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(178, 59, 59, 0.2);
+}
+.card i{
+  font-size: 2.5rem;
+  color: #8A1C1C;
+  margin-bottom: 15px;
+  display: block; /* Para que quede arriba del texto */
+}
+.card-link {
+  text-decoration: none; /* Le saca el subrayado azul */
+  color: inherit;        /* Hereda los colores que ya definiste en la card */
+  display: block;        /* Hace que todo el bloque sea cliqueable */
+}
+
+.proyectos-grid{
+  display: flex; /* Activamos el modo Flexbox ⚡ */
+  flex-direction: row; /* Los pone en fila (uno al lado del otro) */
+  flex-wrap: wrap; /* Si no entran, los manda a la fila de abajo ↩️ */
+  justify-content: center; /* Centra las tarjetas horizontalmente ↔️ */
+  gap: 20px; /* Crea un espacio uniforme entre cada tarjeta 📏 */
+}
+
+.reveal {
+  /* Estado inicial: invisible y un poquito más abajo */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  /* Estado activo: cuando aparece en pantalla */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*=========================================================================================*/
+
+.form-wrapper {
+  /* Panel de Control */
+  background: rgba(255, 255, 255, 0.03); /* Casi transparente, muy sutil */
+  padding: 40px;          /* Espacio interno para que respire */
+  border-radius: 15px;    /* Bordes redondeados modernos */
+  border: 1px solid rgba(138, 28, 28, 0.3); /* Borde rojo muy sutil */
+  backdrop-filter: blur(10px); /* EFECTO VIDRIO: desenfoca lo que hay atrás */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+  max-width: 600px;       /* Limitamos el ancho */
+  margin: 40px auto;      /* Centrado */
+}
+input, textarea {
+  background-color: rgba(0, 0, 0, 0.6); /* Más oscuros que el panel */
+  border: 1px solid #333;
+  color: #fff;
+
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+
+  transition: all 0.3s ease;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  /* Esto ataca el fondo y el color del texto cuando se autocompleta */
+    /* El truco: Usamos un shadow interno gigante para tapar el color del navegador */
+    -webkit-text-fill-color: #EAEAEA !important; /* Color de tu letra */
+    transition: background-color 5000s ease-in-out 0s; /* Hack para que el fondo no cambie */
+    caret-color: white; /* Color del palito que titila al escribir */
+}
+textarea {
+  resize: none;       /* BLOQUEO: El usuario ya no puede estirarlo desde la esquina 🚫 */
+  min-height: 150px;  /* TAMAÑO: Lo hacemos más alto que los inputs comunes */
+}
+input:focus, textarea:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #B23B3B;
+  box-shadow: 0 0 15px rgba(178, 59, 59, 0.3); /* Resplandor rojo */
+  outline: none;
+}
+button {
+  width: 100%; /* Que ocupe todo el ancho del panel */
+  padding: 15px;
+  background: linear-gradient(45deg, #8A1C1C, #B23B3B); /* Degradado rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase; /* Letras mayúsculas tipo militar/tech */
+  letter-spacing: 1px;
+}
+button:hover {
+  transform: translateY(-2px); /* Se levanta un poquito */
+  box-shadow: 0 5px 15px rgba(178, 59, 59, 0.5); /* Sombra roja intensa */
+}
+
+
+
+/* 
+==========================================
+MEDIA QUERIES (PARA CELULARES Y TABLETS)
+========================================== 
+*/
+@media (max-width: 768px) {
+  /* 1. HEADER: Pasamos de fila a columna para que no choquen */
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+  }
+  .header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .header nav a {
+    margin: 0 10px;
+    font-size: 14px; /* Bajamos un poco el tamaño */
+  }
+
+  /* 2. HERO: Reducimos el tamaño gigante de la letra y el padding */
+  .hero {
+    padding: 60px 20px; /* Mucho menos espacio a los lados */
+  }
+  .hero h1 {
+    font-size: 2.5rem; /* De 4rem a 2.5rem para que no se corte */
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* 3. PROYECTOS: Ajustamos las cards para que no se vean forzadas */
+  .card {
+    width: 100%; /* Que ocupen el ancho disponible */
+    max-width: 320px;
+    height: auto; /* Que la altura se adapte al contenido */
+    min-height: 220px;
+  }
+
+  /* 4. FORMULARIO: Menos padding para que entre más texto */
+  .form-wrapper {
+    padding: 25px 20px;
+    margin: 20px;
+  }
+
+  /* 5. TECNOLOGÍAS: Iconos un poco más pequeños */
+  .tech-item i {
+    font-size: 2.8rem;
+  }
+}
+/* Ajuste extra para celulares muy pequeños (iPhone SE, etc) */
+@media (max-width: 400px) {
+  .header nav {
+    flex-wrap: wrap; /* Si son 3 links, que bajen si no entran */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
